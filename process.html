@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduling Algorithm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body{
+        background-image: url(final.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+       
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #333;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    
+    .container {
+        width: 80%;
+        background-color: #222;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    
+    .header label, .header select, .header input {
+        margin-right: 10px;
+    }
+    
+    .metrics {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    
+    .metrics div {
+        flex: 1;
+        margin-right: 10px;
+    }
+    
+    .metrics div:last-child {
+        margin-right: 0;
+    }
+    
+    .metrics label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .metrics input {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #444;
+        background-color: #111;
+        color: #fff;
+        border-radius: 5px;
+    }
+    
+    .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    
+    .data-table th, .data-table td {
+        border: 1px solid #444;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .data-table th {
+        background-color: #555;
+    }
+    
+    .data-table td {
+        background-color: #111;
+    }
+    
+    .status-bar {
+        width: 100%;
+        height: 20px;
+        background-color: #444;
+        border-radius: 5px;
+    }
+    
+    .ready-queue {
+        margin-bottom: 20px;
+    }
+    
+    .ready-queue label {
+        margin-right: 10px;
+    }
+    
+    .video {
+        text-align: center;
+    }
+    
+    .video img {
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+    }
+    a{
+        color: black;
+    }
+    .start{
+    position: absolute;
+    top: 490px;
+    left: 30px;
+    font-size: 10px;
+    padding: 12px;
+    border-radius: 12px;
+        
+}
+a{
+    text-decoration-line: none;
+}
+    </style>
+<body>
+    <div class="container">
+        <div class="header">
+            <label for="algorithm">Algorithm:</label>
+            <select id="algorithm">
+          <option value="round-robin">Round Robin</option>
+          <option value="fcfs">FCFS</option>
+          <option value="sjf">SJF</option>
+          <option value="priority">Priority</option>
+                
+            </select>
+            <div class="cpu">
+                <label for="cpu">CPU:</label>
+                <input type="text" id="cpu" value="P1" readonly>
+            </div>
+        </div>
+
+        <div class="metrics">
+            <div>
+                <label>Average Waiting Time:</label>
+                <input type="text" readonly>
+            </div>
+            <div>
+                <label>Average Turnaround Time:</label>
+                <input type="text" readonly>
+            </div>
+            <div>
+                <label>Total Execution Time:</label>
+                <input type="text" readonly>
+            </div>
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Priority</th>
+                    <th>Status Bar</th>
+                    <th>Remaining Burst Time</th>
+                    <th>Waiting Time</th>
+                </tr>
+            </thead>
+            <tbody>
+             
+                <tr>
+                    <td>P1</td>
+                    <td><div class="status-bar"></div></td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>P2</td>
+                    <td><div class="status-bar"></div></td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <div class="ready-queue">
+            <label>Ready Queue:</label>
+            <input type="text" readonly>
+        </div>
+
+        
+    </div>
+
+    <button class="start"><a href="index.html" >HOME</a></button>
+</body>
+</html>

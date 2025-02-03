@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: url(final.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+       
+    }
+   .parent{
+    position:absolute;
+    top: 250px;
+    left: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   font-size: x-large;
+   }
+   h1{
+    position:absolute;
+    top: 60px;
+    left: 430px;
+    font-size: 60px;
+   }
+    h5{
+    position:absolute;
+    top: 150px;
+    left: 590px;
+    font-size: 20px;
+    }
+  .x{
+    width: 250px;
+  }
+  .y{
+    width: 210px;
+    height: 20px;
+  }
+  .z{
+    width: 190px;
+  }
+.start{
+    position: absolute;
+    top: 230px;
+    right: 270px;
+    font-size: 10px;
+    padding: 12px;
+    border-radius: 12px;
+}
+a{
+  color: black;
+  text-decoration-line: none;
+}
+.startx{
+  color: black;
+  width: 80px;
+    position: absolute;
+    top: 490px;
+    left: 30px;
+    font-size: 10px;
+    padding: 12px;
+    border-radius: 12px;}
+
+.yyz{
+  width: 250px;
+  height: 30px;
+}
+
+.xxz{
+  
+  width: 285px;
+  height: 30px;
+}
+.zzz{
+  width: 230px;
+  height: 20px;
+}
+</style>
+<body><div class="x">
+    <h1>CPU Scheduling</h1>
+    <h5>Simulation</h5></div>
+
+
+<div class="parent">
+<div class="child">
+    <h4><label for="algorithm">Algorithm:</label>
+      <select id="algorithm" class="yyz">
+          <option value="fcfs">FCFS</option>
+          <option value="sjf">SJF</option>
+          <option value="priority">Priority</option>
+          <option value="round-robin">Round Robin</option>
+      </select></h4> 
+    <h4><label for="source">Source:</label>
+      <button id="source" class="xxz">Browse</button></h4>
+    <h4><label for="process-count"># of Process:</label>
+      <input type="number" id="process-count" min="0" max="10" value="0" class="zzz">
+      <span>(0 &le; N &le; 10)</span></h4> 
+    <!-- <button type="submit" class="start">START</button> -->
+    <button class="start"><a href="process.html" >START</a></button>
+</div>
+</div>
+
+<button class="startx"><a href="info.html" >INFO</a></button>
+
+</body>
+</html>
